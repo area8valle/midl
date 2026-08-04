@@ -1,0 +1,3 @@
+include 'configs/base.gin'
+
+CompositeObjective.lambda_phys = 0.0

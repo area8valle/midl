@@ -1,0 +1,88 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "midl"
+version = "1.0.0"
+description = "Mechanistically informed deep learning for knee OA structural progression and TKR prediction"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = [
+    "physics-informed deep learning",
+    "osteoarthritis",
+    "viscoelastic cartilage model",
+    "differentiable ODE",
+    "survival analysis",
+]
+dependencies = [
+    "torch==2.1.0",
+    "torchvision==0.16.0",
+    "numpy==1.26.4",
+    "scipy==1.11.4",
+    "gin-config==0.5.0",
+    "absl-py==1.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.4",
+    "black>=24.3",
+    "isort>=5.13",
+    "mypy>=1.9",
+    "onnx>=1.15",
+]
+
+[project.scripts]
+midl-train = "midl.apps.fit:run"
+midl-evaluate = "midl.apps.score:run"
+midl-synth = "midl.apps.simulate:run"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+src_paths = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B", "SIM"]
+ignore = ["B008"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+disallow_untyped_decorators = false
+warn_unused_ignores = false
+ignore_missing_imports = true
+files = ["src/midl"]
+
+[[tool.mypy.overrides]]
+module = ["gin.*", "absl.*", "torchvision.*", "scipy.*", "onnx.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["midl.dynamics.stepping"]
+disable_error_code = ["override", "misc", "no-untyped-call", "no-any-return"]
+
+[[tool.mypy.overrides]]
+module = ["midl.fitting.loop"]
+disable_error_code = ["no-untyped-call", "no-any-return", "attr-defined"]
+
+[[tool.mypy.overrides]]
+module = ["midl.cohort"]
+disable_error_code = ["no-any-return", "attr-defined"]

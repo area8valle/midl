@@ -1,0 +1,18 @@
+Trainer.lr = 1e-4
+Trainer.weight_decay = 1e-2
+Trainer.epochs = 100
+Trainer.warmup_epochs = 5
+Trainer.min_lr = 1e-6
+Trainer.grad_clip = 1.0
+Trainer.patience = 15
+Trainer.amp = False
+Trainer.ema_decay = 0.0
+Trainer.seed = 42
+Trainer.out_dir = 'runs/midl'
+Trainer.device = 'auto'
+
+CompositeObjective.lambda_tkr = 0.5
+CompositeObjective.lambda_phys = 0.1
+CompositeObjective.lambda_reg = 0.01
+CompositeObjective.er_bounds = (0.5, 50.0)
+CompositeObjective.tau_sigma_bounds = (1.0, 1000.0)

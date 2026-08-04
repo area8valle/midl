@@ -1,0 +1,5 @@
+include 'configs/base.gin'
+
+MIDL.mechanism = 'none'
+CompositeObjective.lambda_phys = 0.0
+CompositeObjective.lambda_reg = 0.0

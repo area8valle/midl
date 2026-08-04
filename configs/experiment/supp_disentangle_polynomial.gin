@@ -1,0 +1,4 @@
+include 'configs/base.gin'
+
+MIDL.mechanism = 'polynomial'
+CompositeObjective.lambda_reg = 0.0

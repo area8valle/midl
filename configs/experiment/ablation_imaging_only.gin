@@ -1,0 +1,6 @@
+include 'configs/base.gin'
+
+MIDL.mechanism = 'none'
+MIDL.use_clinical = False
+CompositeObjective.lambda_phys = 0.0
+CompositeObjective.lambda_reg = 0.0

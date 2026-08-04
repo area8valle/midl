@@ -1,0 +1,3 @@
+include 'configs/model/midl.gin'
+include 'configs/data/synthetic.gin'
+include 'configs/train/default.gin'

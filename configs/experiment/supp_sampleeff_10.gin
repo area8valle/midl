@@ -1,0 +1,4 @@
+include 'configs/base.gin'
+
+synthesize_cohort.n = 480
+make_dataloaders.fractions = (0.10, 0.15, 0.15)

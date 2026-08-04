@@ -1,0 +1,10 @@
+Osteoarthritis Initiative
+Version: 12.0
+Access: Registration and data use agreement required
+License: Provider data use terms apply
+Verified: 2026-08-04
+URL: https://nda.nih.gov/oai
+
+Multicenter Osteoarthritis Study
+Access: Application required
+Status: Official manuscript URL was not retained because it could not be reached during verification on 2026-08-04

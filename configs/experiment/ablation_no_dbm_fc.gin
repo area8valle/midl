@@ -1,0 +1,4 @@
+include 'configs/base.gin'
+
+MIDL.mechanism = 'fc'
+CompositeObjective.lambda_phys = 0.0

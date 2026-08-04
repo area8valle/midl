@@ -1,0 +1,9 @@
+include 'configs/data/synthetic.gin'
+
+synthesize_cohort.kl_probs = (0.258, 0.199, 0.283, 0.171, 0.089)
+synthesize_cohort.age_mu = 62.8
+synthesize_cohort.bmi_mu = 30.9
+synthesize_cohort.female_p = 0.600
+synthesize_cohort.prog_rate = 0.193
+synthesize_cohort.tkr_rate = 0.065
+synthesize_cohort.follow_up_months = 84.0

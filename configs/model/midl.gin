@@ -1,0 +1,13 @@
+MIDL.mechanism = 'sls'
+MIDL.use_clinical = True
+MIDL.pseudo_steps = 16
+MIDL.img_dim = 1792
+MIDL.clin_dim = 64
+MIDL.embed_dim = 128
+
+RadiographEncoder.backbone = 'efficientnet_b4'
+RadiographEncoder.pretrained = False
+
+ClinicalEncoder.n_features = 14
+ClinicalEncoder.hidden = (128, 64, 64)
+ClinicalEncoder.out_dim = 64

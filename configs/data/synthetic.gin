@@ -1,0 +1,16 @@
+synthesize_cohort.n = 256
+synthesize_cohort.image_size = 380
+synthesize_cohort.channels = 3
+synthesize_cohort.kl_probs = (0.261, 0.178, 0.286, 0.177, 0.099)
+synthesize_cohort.age_mu = 61.3
+synthesize_cohort.bmi_mu = 28.6
+synthesize_cohort.female_p = 0.582
+synthesize_cohort.prog_rate = 0.247
+synthesize_cohort.tkr_rate = 0.105
+synthesize_cohort.follow_up_months = 96.0
+synthesize_cohort.seed = 0
+
+make_dataloaders.batch_size = 32
+make_dataloaders.fractions = (0.70, 0.15, 0.15)
+make_dataloaders.num_workers = 0
+make_dataloaders.seed = 42

@@ -1,0 +1,3 @@
+include 'configs/base.gin'
+
+MIDL.pseudo_steps = 4
